@@ -38,20 +38,6 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.DrawerView
 
         return new DrawerViewHolder(view,viewType);
     }
-    @Override
-    public void onBindViewHolder(DrawerViewHolder holder, int position) {
-       if(position == 0) {
-            holder.headerText.setText("Header Text");
-        }
-        else{
-            holder.title.setText(drawerMenuList.get(position - 1).getTitle());
-            holder.icon.setImageResource(drawerMenuList.get(position - 1).getIcon());
-       }
-    }
-    @Override
-    public int getItemCount() {
-        return drawerMenuList.size()+1;
-    }
 
     @Override
     public int getItemViewType(int position) {
@@ -82,6 +68,20 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.DrawerView
                 }
             });
         }
+    }
+    @Override
+    public void onBindViewHolder(DrawerViewHolder holder, int position) {
+       if(position == 0) {
+            holder.headerText.setText("Header Text");
+        }
+        else{
+            holder.title.setText(drawerMenuList.get(position - 1).getTitle());
+            holder.icon.setImageResource(drawerMenuList.get(position - 1).getIcon());
+       }
+    }
+    @Override
+    public int getItemCount() {
+        return drawerMenuList.size()+1;
     }
 
     public void setOnItemClickLister(OnItemSelecteListener mListener) {

@@ -130,6 +130,7 @@ public class EventActivity extends AppCompatActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
+        // This is just some test stuff
         adapter.setOnItemClickLister(new DrawerAdapter.OnItemSelecteListener() {
             @Override
             public void onItemSelected(View v, int position) {
