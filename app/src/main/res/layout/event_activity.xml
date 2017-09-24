@@ -9,6 +9,7 @@
     android:paddingRight="16dp"
     android:paddingStart="16dp">
 
+
     <TextView
         android:id="@+id/site"
         android:layout_width="wrap_content"
